@@ -1,0 +1,69 @@
+{
+  "status": "PASS_LAYOUT_CPU_ONLY",
+  "created": 1792899426.8524058,
+  "archive": "/home/hrxu/nano-vllm-archive/layout-20261025-111959",
+  "root_files_before": 49,
+  "root_files_after": 8,
+  "runtime_python_files": 55,
+  "runtime_byte_unchanged": true,
+  "git_head_unchanged": true,
+  "git_index_unchanged": true,
+  "syntax_checked": 163,
+  "local_imports_missing": [],
+  "active_cli_entries": 53,
+  "checked_doc_links": 75,
+  "regression_files_preserved": 54,
+  "regression_assertion_counts_unchanged": true,
+  "baseline_suites": 9,
+  "after_suites": 25,
+  "after_status": "PASS",
+  "smoke": [
+    {
+      "name": "tests-list",
+      "exit_code": 0
+    },
+    {
+      "name": "benchmarks-list",
+      "exit_code": 0
+    },
+    {
+      "name": "service-help",
+      "exit_code": 0
+    },
+    {
+      "name": "validated-dry-run",
+      "exit_code": 0
+    },
+    {
+      "name": "chat-help",
+      "exit_code": 0
+    },
+    {
+      "name": "marlin-lifecycle-help",
+      "exit_code": 0
+    },
+    {
+      "name": "weight-shards-help",
+      "exit_code": 0
+    },
+    {
+      "name": "marlin-sidecar-help",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy-dispatch",
+      "exit_code": 0
+    }
+  ],
+  "source_before_sha256": "7535924f07b49e246dd329c3e4b7946878298b8ba5fb30c22c0d6c1f4a205325",
+  "source_after_sha256": "04d61e0b2f2069ed585caec59a88a8e02a5da282003fe00a40675ff75e795f80",
+  "actions": {
+    "archive": 140,
+    "archive_evidence": 1,
+    "delete_duplicate": 1,
+    "delete_generated": 9,
+    "move": 71
+  },
+  "scope": "Layout only; original frozen GPU/performance evidence is unchanged. No GPU dispatched.",
+  "initial_extended_attempt": "25 passed; 2 invocation errors required external checkpoint/bundle. Preserved cpu-after-001. Explicit checks remain available; no assertions removed."
+}

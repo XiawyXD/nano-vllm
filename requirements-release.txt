@@ -1,0 +1,14 @@
+# Observed existing Linux / Python 3.10 environment, 2026-11-02 Asia/Shanghai.
+# Install the cu128 Torch wheel first; FlashAttention must match Torch/CUDA ABI.
+# See docs/RUNNING.md. Observed top-level pins, not a complete transitive lockfile.
+torch==2.10.0+cu128
+triton==3.6.0
+transformers==5.14.1
+flash-attn==2.8.3
+numpy==2.5.1
+xxhash==3.8.1
+safetensors==0.8.0
+huggingface-hub==1.25.1
+tokenizers==0.22.2
+regex==2026.7.19
+tqdm==4.70.0

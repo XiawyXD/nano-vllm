@@ -1,0 +1,53 @@
+{
+  "config": {
+    "tensor_parallel_size": 1,
+    "enforce_eager": false,
+    "rmsnorm_backend": "triton",
+    "linear_backend": "triton_stable",
+    "numerical_backend": "consistent",
+    "metadata_backend": "reuse",
+    "enable_mixed_graph": false,
+    "gpu_memory_utilization": 0.9,
+    "max_num_batched_tokens": 256,
+    "prefill_chunk_size": 128,
+    "max_prefill_steps": 1,
+    "kv_cache_dtype": "model",
+    "model": "/home/hrxu/huggingface/Qwen3-8B",
+    "model_dtype": "checkpoint",
+    "max_num_seqs": 1,
+    "max_model_len": 1024,
+    "max_kvcache_blocks": 6,
+    "batching_mode": "mixed",
+    "speculative_policy": "fixed",
+    "enable_prefix_caching": false,
+    "draft_model": "/home/hrxu/huggingface/Qwen3-0.6B",
+    "draft_dtype": "float16",
+    "draft_execution": "graph",
+    "draft_verify_graph": true,
+    "draft_graph_max_tokens": 8,
+    "draft_prefill_graph": true,
+    "draft_prefill_tail_graph": true,
+    "draft_async_metadata": true,
+    "draft_verify_metadata": true,
+    "draft_device_verification": true
+  },
+  "sampling": {
+    "temperature": 0,
+    "max_tokens": 64,
+    "speculative_method": "draft_model",
+    "speculative_max_draft_tokens": 4,
+    "ignore_eos": true
+  },
+  "status": "SCOPED_DRAFT_INCREMENT_PASS_GLOBAL_STREAMING_FAIL",
+  "default": false,
+  "decision": {
+    "incremental_reference": "Existing prefill-enabled FP16 draft K4, same weights/numerical backend",
+    "median_paired_speed_ratio": 1.0324944105254414,
+    "all_five_faster": true,
+    "whole_service_recommended": false,
+    "scope": "RTX4090 TP1/C1, official Qwen3-8B BF16 consistent +Qwen3-0.6B FP16, fixedK4/maxlen1024/chunk256. Frozen mixed32/768 workload pooled pass; all768 categories incremental pass; short32 <3%.",
+    "output_contract": "Unchanged target greedy distribution; old Torch arithmetic is a different baseline",
+    "evidence": "/home/hrxu/nano-vllm-archive/draft-execution-20261026-001/results/final-analysis001.json",
+    "sampling_note": "ignore_eos=True only reproduces fixed64-token benchmark; setFalse for actual EOS stopping"
+  }
+}

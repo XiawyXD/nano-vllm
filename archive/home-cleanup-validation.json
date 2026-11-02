@@ -1,0 +1,72 @@
+{
+  "status": "PASS_EVIDENCE_AND_ACTIVE_DEPENDENCIES",
+  "created": 1792901142.1266572,
+  "preserved_inventory_files": 16528,
+  "direct_files_sha_verified": 13644,
+  "generated_cache_records_ignored": 0,
+  "packed_source_trees_sha_verified": 10,
+  "runtime_unchanged": 55,
+  "profile_dependencies": [
+    {
+      "profile": "quantized_target.json",
+      "key": "model",
+      "path": "/home/hrxu/huggingface/Qwen3-8B-AWQ"
+    },
+    {
+      "profile": "quantized_target.json",
+      "key": "marlin_library",
+      "path": "/home/hrxu/nano-vllm/artifacts/spec_quant_20261023/runtime_deps/marlin_vllm_0_17_1/verified-001/vllm/_C.abi3.so"
+    },
+    {
+      "profile": "quantized_draft_reference.json",
+      "key": "model",
+      "path": "/home/hrxu/huggingface/Qwen3-8B"
+    },
+    {
+      "profile": "quantized_draft_reference.json",
+      "key": "draft_model",
+      "path": "/home/hrxu/nano-draft-calib-20261024/checkpoints/Qwen3-0.6B-AutoRound-W4G128-MixedCal-001"
+    },
+    {
+      "profile": "quantized_draft_reference.json",
+      "key": "marlin_library",
+      "path": "/home/hrxu/nano-vllm/artifacts/spec_quant_20261023/runtime_deps/marlin_vllm_0_17_1/verified-001/vllm/_C.abi3.so"
+    },
+    {
+      "profile": "fp16_draft.json",
+      "key": "model",
+      "path": "/home/hrxu/huggingface/Qwen3-8B"
+    },
+    {
+      "profile": "fp16_draft.json",
+      "key": "draft_model",
+      "path": "/home/hrxu/huggingface/Qwen3-0.6B"
+    },
+    {
+      "profile": "tiered_cache.json",
+      "key": "model",
+      "path": "/home/hrxu/huggingface/Qwen3-1.7B"
+    },
+    {
+      "profile": "ordinary_service.json",
+      "key": "model",
+      "path": "/home/hrxu/huggingface/Qwen3-1.7B"
+    }
+  ],
+  "checks": [
+    {
+      "name": "w4-report-contract",
+      "exit_code": 0
+    },
+    {
+      "name": "validated-service-dry-run",
+      "exit_code": 0
+    },
+    {
+      "name": "quant-environment",
+      "exit_code": 0
+    }
+  ],
+  "gpu_dispatched": false,
+  "archive": "/home/hrxu/nano-vllm-archive/home-cleanup-20261025-120138"
+}

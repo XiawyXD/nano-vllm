@@ -1,0 +1,1058 @@
+{
+  "module_map": {
+    "benchmarks.check_adaptive_speculation": "tests.regression.check_adaptive_speculation",
+    "benchmarks.check_awq_checkpoint_cpu": "tests.regression.check_awq_checkpoint_cpu",
+    "benchmarks.check_awq_compile": "tests.regression.check_awq_compile",
+    "benchmarks.check_awq_gpu": "tests.regression.check_awq_gpu",
+    "benchmarks.check_awq_interpreter": "tests.regression.check_awq_interpreter",
+    "benchmarks.check_awq_packed": "tests.regression.check_awq_packed",
+    "benchmarks.check_cache_draft": "tests.regression.check_cache_draft",
+    "benchmarks.check_cache_draft_harness": "tests.regression.check_cache_draft_harness",
+    "benchmarks.check_draft_graph": "tests.regression.check_draft_graph",
+    "benchmarks.check_draft_model": "tests.regression.check_draft_model",
+    "benchmarks.check_engine_hardening": "tests.regression.check_engine_hardening",
+    "benchmarks.check_execution_plan": "tests.regression.check_execution_plan",
+    "benchmarks.check_flashinfer_sampler": "tests.regression.check_flashinfer_sampler",
+    "benchmarks.check_gpu_guard": "tests.regression.check_gpu_guard",
+    "benchmarks.check_marlin_draft_lifecycle": "tests.regression.check_marlin_draft_lifecycle",
+    "benchmarks.check_marlin_gpu": "tests.regression.check_marlin_gpu",
+    "benchmarks.check_marlin_layout_cpu": "tests.regression.check_marlin_layout_cpu",
+    "benchmarks.check_marlin_sidecar_cpu": "tests.regression.check_marlin_sidecar_cpu",
+    "benchmarks.check_metadata_buffers": "tests.regression.check_metadata_buffers",
+    "benchmarks.check_mlp_dispatch": "tests.regression.check_mlp_dispatch",
+    "benchmarks.check_native_verification_graph": "tests.regression.check_native_verification_graph",
+    "benchmarks.check_ngram": "tests.regression.check_ngram",
+    "benchmarks.check_packed_metadata_cpu": "tests.regression.check_packed_metadata_cpu",
+    "benchmarks.check_packed_runtime": "tests.regression.check_packed_runtime",
+    "benchmarks.check_planned_engine": "tests.regression.check_planned_engine",
+    "benchmarks.check_quant_graph_cpu": "tests.regression.check_quant_graph_cpu",
+    "benchmarks.check_qwen8": "tests.regression.check_qwen8",
+    "benchmarks.check_release_gpu_edges": "tests.regression.check_release_gpu_edges",
+    "benchmarks.check_rotary": "tests.regression.check_rotary",
+    "benchmarks.check_runtime_hardening": "tests.regression.check_runtime_hardening",
+    "benchmarks.check_runtime_v2_engine": "tests.regression.check_runtime_v2_engine",
+    "benchmarks.check_runtime_v2_engine_utils": "tests.regression.check_runtime_v2_engine_utils",
+    "benchmarks.check_runtime_v2_evaluation": "tests.regression.check_runtime_v2_evaluation",
+    "benchmarks.check_runtime_v2_harness": "tests.regression.check_runtime_v2_harness",
+    "benchmarks.check_runtime_v2_soak": "tests.regression.check_runtime_v2_soak",
+    "benchmarks.check_service_hardening": "tests.regression.check_service_hardening",
+    "benchmarks.check_speculative_sampling": "tests.regression.check_speculative_sampling",
+    "benchmarks.check_stochastic_engine": "tests.regression.check_stochastic_engine",
+    "benchmarks.check_stochastic_gpu": "tests.regression.check_stochastic_gpu",
+    "benchmarks.check_tensorcore": "tests.regression.check_tensorcore",
+    "benchmarks.check_tensorcore_model": "tests.regression.check_tensorcore_model",
+    "benchmarks.check_tiered_cache": "tests.regression.check_tiered_cache",
+    "benchmarks.check_tiered_model": "tests.regression.check_tiered_model",
+    "benchmarks.check_tokenizer_stream": "tests.regression.check_tokenizer_stream",
+    "benchmarks.check_tp_runtime": "tests.regression.check_tp_runtime",
+    "benchmarks.check_verification_graph": "tests.regression.check_verification_graph",
+    "benchmarks.check_w4_quality_pair": "tests.regression.check_w4_quality_pair",
+    "benchmarks.check_w4_quality_pair_cpu": "tests.regression.check_w4_quality_pair_cpu",
+    "benchmarks.check_weight_formats": "tests.regression.check_weight_formats",
+    "benchmarks.check_weight_shards": "tests.regression.check_weight_shards",
+    "bench": "benchmarks.bench_offline",
+    "bench_decode_attention": "benchmarks.micro.bench_decode_attention",
+    "bench_fused_sampler": "benchmarks.micro.bench_fused_sampler",
+    "bench_http_sse": "tests.regression.check_http_sse",
+    "bench_kv_cache_fp8": "benchmarks.micro.bench_kv_cache_fp8",
+    "bench_latency": "benchmarks.micro.bench_latency",
+    "bench_openai_api": "tests.regression.check_openai_api",
+    "bench_openai_real": "benchmarks.micro.bench_openai_real",
+    "bench_rmsnorm": "benchmarks.micro.bench_rmsnorm",
+    "bench_rmsnorm_e2e": "benchmarks.micro.bench_rmsnorm_e2e",
+    "bench_sampling": "tests.regression.check_sampling_gpu",
+    "bench_sampling_e2e": "benchmarks.micro.bench_sampling_e2e",
+    "bench_scheduler": "benchmarks.micro.bench_scheduler",
+    "bench_serving_matrix": "benchmarks.micro.bench_serving_matrix",
+    "bench_speculative": "benchmarks.micro.bench_speculative",
+    "bench_speculative_batch": "benchmarks.micro.bench_speculative_batch",
+    "bench_streaming": "benchmarks.micro.bench_streaming",
+    "bench_unified_scheduler": "benchmarks.micro.bench_unified_scheduler",
+    "chat_nano": "examples.chat_nano",
+    "example": "examples.example",
+    "test_unified_scheduler": "tests.regression.test_unified_scheduler"
+  },
+  "path_map": {
+    "benchmarks/check_adaptive_speculation.py": "tests/regression/check_adaptive_speculation.py",
+    "benchmarks/check_awq_checkpoint_cpu.py": "tests/regression/check_awq_checkpoint_cpu.py",
+    "benchmarks/check_awq_compile.py": "tests/regression/check_awq_compile.py",
+    "benchmarks/check_awq_gpu.py": "tests/regression/check_awq_gpu.py",
+    "benchmarks/check_awq_interpreter.py": "tests/regression/check_awq_interpreter.py",
+    "benchmarks/check_awq_packed.py": "tests/regression/check_awq_packed.py",
+    "benchmarks/check_cache_draft.py": "tests/regression/check_cache_draft.py",
+    "benchmarks/check_cache_draft_harness.py": "tests/regression/check_cache_draft_harness.py",
+    "benchmarks/check_draft_graph.py": "tests/regression/check_draft_graph.py",
+    "benchmarks/check_draft_model.py": "tests/regression/check_draft_model.py",
+    "benchmarks/check_engine_hardening.py": "tests/regression/check_engine_hardening.py",
+    "benchmarks/check_execution_plan.py": "tests/regression/check_execution_plan.py",
+    "benchmarks/check_flashinfer_sampler.py": "tests/regression/check_flashinfer_sampler.py",
+    "benchmarks/check_gpu_guard.py": "tests/regression/check_gpu_guard.py",
+    "benchmarks/check_marlin_draft_lifecycle.py": "tests/regression/check_marlin_draft_lifecycle.py",
+    "benchmarks/check_marlin_gpu.py": "tests/regression/check_marlin_gpu.py",
+    "benchmarks/check_marlin_layout_cpu.py": "tests/regression/check_marlin_layout_cpu.py",
+    "benchmarks/check_marlin_sidecar_cpu.py": "tests/regression/check_marlin_sidecar_cpu.py",
+    "benchmarks/check_metadata_buffers.py": "tests/regression/check_metadata_buffers.py",
+    "benchmarks/check_mlp_dispatch.py": "tests/regression/check_mlp_dispatch.py",
+    "benchmarks/check_native_verification_graph.py": "tests/regression/check_native_verification_graph.py",
+    "benchmarks/check_ngram.py": "tests/regression/check_ngram.py",
+    "benchmarks/check_packed_metadata_cpu.py": "tests/regression/check_packed_metadata_cpu.py",
+    "benchmarks/check_packed_runtime.py": "tests/regression/check_packed_runtime.py",
+    "benchmarks/check_planned_engine.py": "tests/regression/check_planned_engine.py",
+    "benchmarks/check_quant_graph_cpu.py": "tests/regression/check_quant_graph_cpu.py",
+    "benchmarks/check_qwen8.py": "tests/regression/check_qwen8.py",
+    "benchmarks/check_release_gpu_edges.py": "tests/regression/check_release_gpu_edges.py",
+    "benchmarks/check_rotary.py": "tests/regression/check_rotary.py",
+    "benchmarks/check_runtime_hardening.py": "tests/regression/check_runtime_hardening.py",
+    "benchmarks/check_runtime_v2_engine.py": "tests/regression/check_runtime_v2_engine.py",
+    "benchmarks/check_runtime_v2_engine_utils.py": "tests/regression/check_runtime_v2_engine_utils.py",
+    "benchmarks/check_runtime_v2_evaluation.py": "tests/regression/check_runtime_v2_evaluation.py",
+    "benchmarks/check_runtime_v2_harness.py": "tests/regression/check_runtime_v2_harness.py",
+    "benchmarks/check_runtime_v2_soak.py": "tests/regression/check_runtime_v2_soak.py",
+    "benchmarks/check_service_hardening.py": "tests/regression/check_service_hardening.py",
+    "benchmarks/check_speculative_sampling.py": "tests/regression/check_speculative_sampling.py",
+    "benchmarks/check_stochastic_engine.py": "tests/regression/check_stochastic_engine.py",
+    "benchmarks/check_stochastic_gpu.py": "tests/regression/check_stochastic_gpu.py",
+    "benchmarks/check_tensorcore.py": "tests/regression/check_tensorcore.py",
+    "benchmarks/check_tensorcore_model.py": "tests/regression/check_tensorcore_model.py",
+    "benchmarks/check_tiered_cache.py": "tests/regression/check_tiered_cache.py",
+    "benchmarks/check_tiered_model.py": "tests/regression/check_tiered_model.py",
+    "benchmarks/check_tokenizer_stream.py": "tests/regression/check_tokenizer_stream.py",
+    "benchmarks/check_tp_runtime.py": "tests/regression/check_tp_runtime.py",
+    "benchmarks/check_verification_graph.py": "tests/regression/check_verification_graph.py",
+    "benchmarks/check_w4_quality_pair.py": "tests/regression/check_w4_quality_pair.py",
+    "benchmarks/check_w4_quality_pair_cpu.py": "tests/regression/check_w4_quality_pair_cpu.py",
+    "benchmarks/check_weight_formats.py": "tests/regression/check_weight_formats.py",
+    "benchmarks/check_weight_shards.py": "tests/regression/check_weight_shards.py",
+    "bench.py": "benchmarks/bench_offline.py",
+    "bench_decode_attention.py": "benchmarks/micro/bench_decode_attention.py",
+    "bench_fused_sampler.py": "benchmarks/micro/bench_fused_sampler.py",
+    "bench_http_sse.py": "tests/regression/check_http_sse.py",
+    "bench_kv_cache_fp8.py": "benchmarks/micro/bench_kv_cache_fp8.py",
+    "bench_latency.py": "benchmarks/micro/bench_latency.py",
+    "bench_openai_api.py": "tests/regression/check_openai_api.py",
+    "bench_openai_real.py": "benchmarks/micro/bench_openai_real.py",
+    "bench_rmsnorm.py": "benchmarks/micro/bench_rmsnorm.py",
+    "bench_rmsnorm_e2e.py": "benchmarks/micro/bench_rmsnorm_e2e.py",
+    "bench_sampling.py": "tests/regression/check_sampling_gpu.py",
+    "bench_sampling_e2e.py": "benchmarks/micro/bench_sampling_e2e.py",
+    "bench_scheduler.py": "benchmarks/micro/bench_scheduler.py",
+    "bench_serving_matrix.py": "benchmarks/micro/bench_serving_matrix.py",
+    "bench_speculative.py": "benchmarks/micro/bench_speculative.py",
+    "bench_speculative_batch.py": "benchmarks/micro/bench_speculative_batch.py",
+    "bench_streaming.py": "benchmarks/micro/bench_streaming.py",
+    "bench_unified_scheduler.py": "benchmarks/micro/bench_unified_scheduler.py",
+    "chat_nano.py": "examples/chat_nano.py",
+    "example.py": "examples/example.py",
+    "test_unified_scheduler.py": "tests/regression/test_unified_scheduler.py"
+  },
+  "archived": [
+    {
+      "action": "archive",
+      "source": "HANDOFF_CACHE_DRAFT_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/HANDOFF_CACHE_DRAFT_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "HANDOFF_DRAFT_CALIBRATION_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/HANDOFF_DRAFT_CALIBRATION_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "HANDOFF_DRAFT_QUALITY_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/HANDOFF_DRAFT_QUALITY_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "HANDOFF_ROPE_MARLIN_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/HANDOFF_ROPE_MARLIN_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "HANDOFF_SPEC_QUANT_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/HANDOFF_SPEC_QUANT_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "HANDOFF_TARGET_ALIGNMENT_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/HANDOFF_TARGET_ALIGNMENT_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "RUNTIME_V2_CODE_WALKTHROUGH_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/RUNTIME_V2_CODE_WALKTHROUGH_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "RUNTIME_V2_COMPLETION_AUDIT_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/RUNTIME_V2_COMPLETION_AUDIT_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "RUNTIME_V2_COMPLETION_README_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/RUNTIME_V2_COMPLETION_README_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "RUNTIME_V2_FINAL_ACCEPTANCE_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/RUNTIME_V2_FINAL_ACCEPTANCE_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "RUNTIME_V2_POST_MATRIX_EXECUTION_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/RUNTIME_V2_POST_MATRIX_EXECUTION_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/AWQ_BACKEND_AND_W4A4_AUDIT_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/AWQ_BACKEND_AND_W4A4_AUDIT_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/BENCHMARKS.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/BENCHMARKS.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/CACHE_DRAFT_ACCEPTANCE_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/CACHE_DRAFT_ACCEPTANCE_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/CACHE_DRAFT_INTERVIEW.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/CACHE_DRAFT_INTERVIEW.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/CACHE_DRAFT_LEARNING_WEEK.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/CACHE_DRAFT_LEARNING_WEEK.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/CACHE_DRAFT_RUNBOOK.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/CACHE_DRAFT_RUNBOOK.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/CHECKPOINT_PROVENANCE_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/CHECKPOINT_PROVENANCE_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/DRAFT_CALIBRATION_RESULTS_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/DRAFT_CALIBRATION_RESULTS_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/DRAFT_QUALITY_RESULTS_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/DRAFT_QUALITY_RESULTS_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/DRAFT_REPAIR_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/DRAFT_REPAIR_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/FIVE_STAGE_LEARNING.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/FIVE_STAGE_LEARNING.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/FIVE_STAGE_PLAN.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/FIVE_STAGE_PLAN.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/FLASHINFER_ATTENTION.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/FLASHINFER_ATTENTION.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/FLASHINFER_SAMPLING.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/FLASHINFER_SAMPLING.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/INTERNSHIP_LEARNING_CHECKLIST.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/INTERNSHIP_LEARNING_CHECKLIST.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/INTERVIEW_DEMO.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/INTERVIEW_DEMO.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/MARLIN_EXPLAIN_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/MARLIN_EXPLAIN_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/MARLIN_GPU_HANDOFF_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/MARLIN_GPU_HANDOFF_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/MARLIN_SIDECAR_FEASIBILITY_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/MARLIN_SIDECAR_FEASIBILITY_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/PORTFOLIO_ROADMAP.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/PORTFOLIO_ROADMAP.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/QWEN3_8B.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/QWEN3_8B.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RELEASE_CODE_GUIDE.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RELEASE_CODE_GUIDE.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RELEASE_NUMERICAL_REVIEW.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RELEASE_NUMERICAL_REVIEW.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/REPRODUCE_RELEASE.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/REPRODUCE_RELEASE.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RESUME_PROJECT.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RESUME_PROJECT.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/ROPE_MARLIN_RESULTS_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/ROPE_MARLIN_RESULTS_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_ADAPTIVE_GUARD_DIAGNOSTIC_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_ADAPTIVE_GUARD_DIAGNOSTIC_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_ADAPTIVE_LENGTH_COVERAGE_GPU2_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_ADAPTIVE_LENGTH_COVERAGE_GPU2_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_ADAPTIVE_LENGTH_DIAGNOSTIC_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_ADAPTIVE_LENGTH_DIAGNOSTIC_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_ADAPTIVE_METADATA_TEACHING.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_ADAPTIVE_METADATA_TEACHING.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_AUTO_GPU_20261013.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_AUTO_GPU_20261013.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_AUXILIARY_REFERENCE.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_AUXILIARY_REFERENCE.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_BATCH_NUMERICAL_DIAG_GPU2_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_BATCH_NUMERICAL_DIAG_GPU2_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_COMPLETION_AUDIT_20261013.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_COMPLETION_AUDIT_20261013.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_CPU_PATHFIX_AUDIT_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_CPU_PATHFIX_AUDIT_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_CURRENT_ACCEPTANCE_GPU2_20261012.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_CURRENT_ACCEPTANCE_GPU2_20261012.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_CURRENT_ACCEPTANCE_GPU2_20261012_SHA256.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_CURRENT_ACCEPTANCE_GPU2_20261012_SHA256.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_DELIVERY_README_GPU2_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_DELIVERY_README_GPU2_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_ENGINE_ACCEPTANCE.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_ENGINE_ACCEPTANCE.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_EVALUATION_TEACHING.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_EVALUATION_TEACHING.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_FINAL_ACCEPTANCE_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_FINAL_ACCEPTANCE_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_FINAL_ACCEPTANCE_20261013.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_FINAL_ACCEPTANCE_20261013.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_GPU2_PATHFIX_ATTEMPT_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_GPU2_PATHFIX_ATTEMPT_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_GPU_ACCEPTANCE_PROGRESS.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_GPU_ACCEPTANCE_PROGRESS.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_KV_TEACHING.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_KV_TEACHING.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_NUMERICAL_STAGE1.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_NUMERICAL_STAGE1.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PACKED_TEACHING.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PACKED_TEACHING.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PARALLEL_DIAGNOSTICS_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PARALLEL_DIAGNOSTICS_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PD_CHUNK_DIAGNOSTIC_GPU2_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PD_CHUNK_DIAGNOSTIC_GPU2_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PD_MIXED_DIAGNOSTIC_GPU2_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PD_MIXED_DIAGNOSTIC_GPU2_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PD_STAGE_PROFILE_GPU2_20261012.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PD_STAGE_PROFILE_GPU2_20261012.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PREFILL_BUDGET_DIAGNOSTIC_GPU2_20261012.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PREFILL_BUDGET_DIAGNOSTIC_GPU2_20261012.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PROFILE_PATHFIX_GPU2_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PROFILE_PATHFIX_GPU2_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PROGRESS.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PROGRESS.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PROGRESS_GPU2_20261011.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PROGRESS_GPU2_20261011.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_PROGRESS_GPU2_20261012.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_PROGRESS_GPU2_20261012.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_REPRODUCIBILITY_STAGING_20261013.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_REPRODUCIBILITY_STAGING_20261013.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_RUNBOOK.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_RUNBOOK.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_SERVER_STATUS_20261010.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_SERVER_STATUS_20261010.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_SOAK.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_SOAK.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_TARGET_NUMERICAL_20261013.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_TARGET_NUMERICAL_20261013.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_TRAJECTORY_TARGETS_20261013.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_TRAJECTORY_TARGETS_20261013.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_VARLEN_CALIBRATION_GPU2_20261012.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_VARLEN_CALIBRATION_GPU2_20261012.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/RUNTIME_V2_VARLEN_DECODEFIX_GPU2_20261012.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/RUNTIME_V2_VARLEN_DECODEFIX_GPU2_20261012.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/SPEC_QUANT_LEARNING_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/SPEC_QUANT_LEARNING_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/SPEC_QUANT_PAIRED_ANALYSIS_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/SPEC_QUANT_PAIRED_ANALYSIS_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/SPEC_QUANT_RESULTS_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/SPEC_QUANT_RESULTS_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/SPEC_QUANT_RUNBOOK_20261023.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/SPEC_QUANT_RUNBOOK_20261023.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/TARGET_ALIGNMENT_RESULTS_20261024.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/TARGET_ALIGNMENT_RESULTS_20261024.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/TENSORCORE_TP_LEARNING.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/TENSORCORE_TP_LEARNING.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/TENSORCORE_TP_REPRODUCE.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/TENSORCORE_TP_REPRODUCE.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/TIERED_GPU2_REPRODUCE.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/TIERED_GPU2_REPRODUCE.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/TIERED_KV_GRAPH_SLO.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/TIERED_KV_GRAPH_SLO.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "docs/optimization_log.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/optimization_log.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "nanovllm/OPTIMIZATION_STATUS.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/nanovllm/OPTIMIZATION_STATUS.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "nanovllm/RUNTIME_V2_CODE_WALKTHROUGH_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/nanovllm/RUNTIME_V2_CODE_WALKTHROUGH_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "nanovllm/RUNTIME_V2_COMPLETION_AUDIT_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/nanovllm/RUNTIME_V2_COMPLETION_AUDIT_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "nanovllm/RUNTIME_V2_NUMERICAL_DIAGNOSTIC_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/nanovllm/RUNTIME_V2_NUMERICAL_DIAGNOSTIC_20261014.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "nanovllm/RUNTIME_V2_STABLE_LINEAR_PROGRESS_20261013.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/nanovllm/RUNTIME_V2_STABLE_LINEAR_PROGRESS_20261013.md",
+      "reason": "superseded staged report; final report and new learning index become the entry"
+    },
+    {
+      "action": "archive",
+      "source": "optimization_log",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/optimization_log",
+      "reason": "historical notes"
+    },
+    {
+      "action": "archive",
+      "source": "docs/archive",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/docs/archive",
+      "reason": "historical notes"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/archive_followup.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/archive_followup.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/audit_awq_scale_cast_cpu.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/audit_awq_scale_cast_cpu.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/check_five_stage.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/check_five_stage.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/check_followup.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/check_followup.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/diagnose_draft_numerics.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/diagnose_draft_numerics.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/diagnose_packed_attention.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/diagnose_packed_attention.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/diagnose_packed_batch_shape.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/diagnose_packed_batch_shape.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/diagnose_prefill_paths.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/diagnose_prefill_paths.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/diagnose_release_mismatch.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/diagnose_release_mismatch.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/diagnose_runtime_v2.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/diagnose_runtime_v2.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/download_qwen8.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/download_qwen8.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/five_stage_cache.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/five_stage_cache.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/five_stage_cascade.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/five_stage_cascade.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/five_stage_numerics.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/five_stage_numerics.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/five_stage_parallel.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/five_stage_parallel.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/five_stage_report.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/five_stage_report.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/five_stage_slo.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/five_stage_slo.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/followup_cache.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/followup_cache.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/followup_cascade.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/followup_cascade.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/followup_cascade_oracle.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/followup_cascade_oracle.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/followup_compare.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/followup_compare.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/followup_parallel.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/followup_parallel.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/followup_remaining.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/followup_remaining.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/followup_report.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/followup_report.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/followup_schedule.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/followup_schedule.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/inspect_tensorcore.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/inspect_tensorcore.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/numerical_audit.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/numerical_audit.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/prepare_draft_repair.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/prepare_draft_repair.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/prepare_feature_experiment.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/prepare_feature_experiment.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/prepare_spec_quant_screen.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/prepare_spec_quant_screen.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/replay_prefill_attention.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/replay_prefill_attention.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/replay_release_mismatch.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/replay_release_mismatch.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/runtime_v2_adaptive_guard_probe.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/runtime_v2_adaptive_guard_probe.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/runtime_v2_auto_gpu.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/runtime_v2_auto_gpu.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/runtime_v2_spec_length_probe.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/runtime_v2_spec_length_probe.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/summarize_draft_numerics.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/summarize_draft_numerics.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "benchmarks/validate_tiered_release.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/benchmarks/validate_tiered_release.py",
+      "reason": "staged experiment or one-off diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "compare_chat_reference.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/compare_chat_reference.py",
+      "reason": "old batch driver, downloader, or diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "diagnose_reference.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/diagnose_reference.py",
+      "reason": "old batch driver, downloader, or diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "download_qwen17.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/download_qwen17.py",
+      "reason": "old batch driver, downloader, or diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "run_nano_vllm_optimization_suite.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/run_nano_vllm_optimization_suite.py",
+      "reason": "old batch driver, downloader, or diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "run_openai_api_suite.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/run_openai_api_suite.py",
+      "reason": "old batch driver, downloader, or diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "run_serving_optimization_suite.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/run_serving_optimization_suite.py",
+      "reason": "old batch driver, downloader, or diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "run_streaming_sampling_spec_suite.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/run_streaming_sampling_spec_suite.py",
+      "reason": "old batch driver, downloader, or diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "summarize_stages.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/summarize_stages.py",
+      "reason": "old batch driver, downloader, or diagnostic"
+    },
+    {
+      "action": "archive",
+      "source": "run_four_stages.sh",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/run_four_stages.sh",
+      "reason": "historical configuration/fixture; current validated entry replaces it"
+    },
+    {
+      "action": "archive",
+      "source": "scripts/serve_qwen8.sh",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/scripts/serve_qwen8.sh",
+      "reason": "historical configuration/fixture; current validated entry replaces it"
+    },
+    {
+      "action": "archive",
+      "source": "tests/test_scheduler_policy.py",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/tests/test_scheduler_policy.py",
+      "reason": "historical configuration/fixture; current validated entry replaces it"
+    },
+    {
+      "action": "archive_evidence",
+      "source": "artifacts",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/evidence/artifacts",
+      "reason": "move raw evidence outside source tree; retain original path via symlink"
+    }
+  ],
+  "deleted": [
+    {
+      "action": "delete_duplicate",
+      "source": "nanovllm/RUNTIME_V2_POST_MATRIX_EXECUTION_20261014.md",
+      "destination": "/home/hrxu/nano-vllm-archive/layout-20261025-111959/historical/RUNTIME_V2_POST_MATRIX_EXECUTION_20261014.md",
+      "reason": "byte-identical document preserved in archive and source snapshot"
+    },
+    {
+      "action": "delete_generated",
+      "source": "build",
+      "destination": null,
+      "reason": "reproducible build copy; included in source-before.tar.gz"
+    },
+    {
+      "action": "delete_generated",
+      "source": "__pycache__",
+      "destination": null,
+      "reason": "regenerable Python bytecode"
+    },
+    {
+      "action": "delete_generated",
+      "source": "nanovllm/__pycache__",
+      "destination": null,
+      "reason": "regenerable Python bytecode"
+    },
+    {
+      "action": "delete_generated",
+      "source": "nanovllm/layers/__pycache__",
+      "destination": null,
+      "reason": "regenerable Python bytecode"
+    },
+    {
+      "action": "delete_generated",
+      "source": "nanovllm/utils/__pycache__",
+      "destination": null,
+      "reason": "regenerable Python bytecode"
+    },
+    {
+      "action": "delete_generated",
+      "source": "nanovllm/models/__pycache__",
+      "destination": null,
+      "reason": "regenerable Python bytecode"
+    },
+    {
+      "action": "delete_generated",
+      "source": "nanovllm/engine/__pycache__",
+      "destination": null,
+      "reason": "regenerable Python bytecode"
+    },
+    {
+      "action": "delete_generated",
+      "source": "benchmarks/__pycache__",
+      "destination": null,
+      "reason": "regenerable Python bytecode"
+    },
+    {
+      "action": "delete_generated",
+      "source": "tests/__pycache__",
+      "destination": null,
+      "reason": "regenerable Python bytecode"
+    }
+  ]
+}

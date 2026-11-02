@@ -1,0 +1,233 @@
+{
+  "schema": "full-opt-explicit-profiles-v1",
+  "profiles": {
+    "ordinary_service": {
+      "config": {
+        "tensor_parallel_size": 1,
+        "enforce_eager": false,
+        "rmsnorm_backend": "triton",
+        "linear_backend": "torch",
+        "numerical_backend": "default",
+        "metadata_backend": "reuse",
+        "enable_mixed_graph": false,
+        "gpu_memory_utilization": 0.9,
+        "max_num_batched_tokens": 256,
+        "prefill_chunk_size": 128,
+        "max_prefill_steps": 1,
+        "kv_cache_dtype": "model",
+        "model": "/home/hrxu/huggingface/Qwen3-1.7B",
+        "model_dtype": "checkpoint",
+        "max_num_seqs": 8,
+        "max_model_len": 2048,
+        "max_kvcache_blocks": 32,
+        "batching_mode": "separate",
+        "speculative_policy": "off",
+        "enable_prefix_caching": true
+      },
+      "status": "PASS_CURRENT_SOURCE_TP1_C8_HTTP",
+      "default": true,
+      "decision": {
+        "status": "PASS_CURRENT_SOURCE_TP1_C8_HTTP",
+        "recommended": true,
+        "scope": "Qwen3-1.7B BF16 TP1 C8, exact frozen config and TTL5 service limits",
+        "default_changed": false
+      }
+    },
+    "tiered_cache": {
+      "config": {
+        "tensor_parallel_size": 1,
+        "enforce_eager": false,
+        "rmsnorm_backend": "triton",
+        "linear_backend": "torch",
+        "numerical_backend": "default",
+        "metadata_backend": "reuse",
+        "enable_mixed_graph": false,
+        "gpu_memory_utilization": 0.9,
+        "max_num_batched_tokens": 256,
+        "prefill_chunk_size": 128,
+        "max_prefill_steps": 1,
+        "kv_cache_dtype": "model",
+        "model": "/home/hrxu/huggingface/Qwen3-1.7B",
+        "model_dtype": "checkpoint",
+        "max_num_seqs": 8,
+        "max_model_len": 2048,
+        "max_kvcache_blocks": 12,
+        "batching_mode": "separate",
+        "speculative_policy": "off",
+        "enable_prefix_caching": true,
+        "host_kv_cache_bytes": 1073741824,
+        "host_kv_async_prefetch": false
+      },
+      "status": "CAPACITY_THROUGHPUT_PASS_ABSOLUTE_SLO_MISS",
+      "default": false,
+      "decision": {
+        "status": "CAPACITY_THROUGHPUT_PASS_ABSOLUTE_SLO_MISS",
+        "recommended": false,
+        "scope": "GPU12 pages/336MiB +CPU1GiB, repeated1025-token-prefix capacity fixture only",
+        "reason": "1.303189891x recurring; unique no stable benefit; absolute SLO only30/180 per category/control",
+        "default_changed": false
+      }
+    },
+    "fp16_draft": {
+      "config": {
+        "tensor_parallel_size": 1,
+        "enforce_eager": false,
+        "rmsnorm_backend": "triton",
+        "linear_backend": "triton_stable",
+        "numerical_backend": "consistent",
+        "metadata_backend": "reuse",
+        "enable_mixed_graph": false,
+        "gpu_memory_utilization": 0.9,
+        "max_num_batched_tokens": 256,
+        "prefill_chunk_size": 128,
+        "max_prefill_steps": 1,
+        "kv_cache_dtype": "model",
+        "model": "/home/hrxu/huggingface/Qwen3-8B",
+        "model_dtype": "checkpoint",
+        "max_num_seqs": 1,
+        "max_model_len": 1024,
+        "max_kvcache_blocks": 6,
+        "batching_mode": "mixed",
+        "speculative_policy": "fixed",
+        "enable_prefix_caching": false,
+        "draft_model": "/home/hrxu/huggingface/Qwen3-0.6B",
+        "draft_dtype": "float16",
+        "draft_execution": "graph",
+        "draft_verify_graph": true,
+        "draft_graph_max_tokens": 8
+      },
+      "sampling": {
+        "temperature": 0,
+        "max_tokens": 64,
+        "speculative_method": "draft_model",
+        "speculative_max_draft_tokens": 4
+      },
+      "status": "THROUGHPUT_PASS_STREAMING_TAIL_REGRESSION",
+      "default": false,
+      "decision": {
+        "status": "THROUGHPUT_PASS_STREAMING_TAIL_REGRESSION",
+        "recommended": false,
+        "scope": "8B consistent BF16 target +FP16 .6B, TP1/C1/K4; exact only to own consistent baseline",
+        "reason": "1.793028279x same-target exact; event-gap p95 27.47ms vs17.38ms; ordinary Torch output differs",
+        "default_changed": false
+      }
+    },
+    "quantized_target": {
+      "config": {
+        "tensor_parallel_size": 1,
+        "enforce_eager": false,
+        "rmsnorm_backend": "triton",
+        "linear_backend": "torch",
+        "numerical_backend": "default",
+        "metadata_backend": "reuse",
+        "enable_mixed_graph": false,
+        "gpu_memory_utilization": 0.9,
+        "max_num_batched_tokens": 256,
+        "prefill_chunk_size": 128,
+        "max_prefill_steps": 1,
+        "kv_cache_dtype": "model",
+        "model": "/home/hrxu/huggingface/Qwen3-8B-AWQ",
+        "model_dtype": "float16",
+        "quantization": "awq",
+        "quant_backend": "marlin",
+        "marlin_library": "/home/hrxu/nano-vllm/artifacts/spec_quant_20261023/runtime_deps/marlin_vllm_0_17_1/verified-001/vllm/_C.abi3.so",
+        "max_num_seqs": 1,
+        "max_model_len": 1024,
+        "max_kvcache_blocks": 6,
+        "batching_mode": "separate",
+        "speculative_policy": "off",
+        "enable_prefix_caching": false
+      },
+      "status": "SCOPED_REPEAT_PASS",
+      "default": false,
+      "decision": {
+        "status": "SCOPED_REPEAT_PASS",
+        "recommended": true,
+        "recommended_domains": [
+          "repeat"
+        ],
+        "scope": "8B AWQ/Marlin W4A16 TP1/C1 short-context greedy; changed model distribution; Q1 Graph/eager scope only",
+        "reason": "2.301978580x pooled vs ordinary; pooled TTFT ratio1.1016675 exceeds1.10, no whole-profile promotion",
+        "default_changed": false
+      }
+    },
+    "quantized_draft_reference": {
+      "config": {
+        "tensor_parallel_size": 1,
+        "enforce_eager": false,
+        "rmsnorm_backend": "triton",
+        "linear_backend": "triton_stable",
+        "numerical_backend": "consistent",
+        "metadata_backend": "reuse",
+        "enable_mixed_graph": false,
+        "gpu_memory_utilization": 0.9,
+        "max_num_batched_tokens": 256,
+        "prefill_chunk_size": 128,
+        "max_prefill_steps": 1,
+        "kv_cache_dtype": "model",
+        "model": "/home/hrxu/huggingface/Qwen3-8B",
+        "model_dtype": "checkpoint",
+        "max_num_seqs": 1,
+        "max_model_len": 1024,
+        "max_kvcache_blocks": 6,
+        "batching_mode": "mixed",
+        "speculative_policy": "fixed",
+        "enable_prefix_caching": false,
+        "draft_model": "/home/hrxu/nano-draft-calib-20261024/checkpoints/Qwen3-0.6B-AutoRound-W4G128-MixedCal-001",
+        "draft_dtype": "float16",
+        "draft_execution": "graph",
+        "draft_verify_graph": true,
+        "draft_graph_max_tokens": 8,
+        "draft_quantization": "awq",
+        "draft_quant_backend": "marlin",
+        "marlin_library": "/home/hrxu/nano-vllm/artifacts/spec_quant_20261023/runtime_deps/marlin_vllm_0_17_1/verified-001/vllm/_C.abi3.so"
+      },
+      "sampling": {
+        "temperature": 0,
+        "max_tokens": 64,
+        "speculative_method": "draft_model",
+        "speculative_max_draft_tokens": 4
+      },
+      "status": "REVIEW_REQUIRED_NO_STABLE_GAIN",
+      "default": false,
+      "decision": {
+        "status": "REVIEW_REQUIRED_NO_STABLE_GAIN",
+        "recommended": false,
+        "scope": "Old MSE W4A16 native draft diagnostic reference",
+        "reason": "Full-logit dense/Marlin REVIEW persists; speed1.004324998x FP16 below1.03 gate; acceptance44.989% vs46.975%",
+        "default_changed": false
+      }
+    }
+  },
+  "global_optimized_status": "PENDING_VALIDATION",
+  "support": "Qwen3 dense TP1. Native draft single active, model KV, fixed policy, no host cache.",
+  "no_historical_speed_claim_promoted": true,
+  "final_decisions": "CONFIG_DECISIONS.json",
+  "original_frozen_profiles_sha256": "e2d54a385e283a55da65ab092f48ffebb9394779574a4d8e30f723f268bc1c88",
+  "experiments": {
+    "async_metadata": {
+      "status": "CORRECT_BUT_NO_STABLE_GAIN",
+      "recommended": false,
+      "median_ratio": 1.0003245320271863,
+      "all_rounds_faster": false,
+      "default_enabled": false
+    },
+    "new_calibration": {
+      "status": "STOPPED_DEV_ROLLOUT_REJECTED",
+      "recommended": false,
+      "final_validation_performed": false,
+      "checkpoint": "/home/hrxu/nano-full-opt-20261024/quantization/attempts/full_mse003/deployment",
+      "checkpoint_sha256": "e9759970c0c0d8893724ef30fd989c0a49ad5734b4b39229a2b762e1b86588bf",
+      "reason": "DEV NLL/KL pass; CN1200/4131 <1218/4062, verifications3195>3189",
+      "default_enabled": false
+    },
+    "stochastic_temperature": {
+      "status": "CORRECTNESS_VALIDATED",
+      "recommended_for_speed": false,
+      "scope": "FP16 native draft TP1/C1 temperature-only; no top-k/top-p/penalties; FP64 normalized p/q",
+      "gpu_samples_per_case": 100000,
+      "default_enabled": false
+    }
+  },
+  "all_global_defaults_unchanged": true
+}

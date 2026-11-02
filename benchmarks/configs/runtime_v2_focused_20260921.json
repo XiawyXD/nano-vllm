@@ -1,0 +1,10 @@
+{
+  "fixtures": [],
+  "stages": [{
+    "name": "focused_calibration",
+    "entry": "runtime-v2-performance",
+    "args": ["run", "--model", "/home/hrxu/huggingface/Qwen3-1.7B", "--input-split", "calibration", "--variants", "baseline,mixed,adaptive_length,graph", "--datasets", "english,repeat", "--scenarios", "dynamic", "--concurrencies", "4", "--rounds", "3", "--requests-per-case", "8", "--short-tokens", "96", "--long-tokens", "512", "--output-tokens", "32", "--output", "{stage_output}"],
+    "timeout_seconds": 2400,
+    "result_json": "{stage_output}/summary.json"
+  }]
+}

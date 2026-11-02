@@ -1,0 +1,35 @@
+{
+  "config": {
+    "tensor_parallel_size": 1,
+    "enforce_eager": false,
+    "rmsnorm_backend": "triton",
+    "linear_backend": "torch",
+    "numerical_backend": "default",
+    "metadata_backend": "reuse",
+    "enable_mixed_graph": false,
+    "gpu_memory_utilization": 0.9,
+    "max_num_batched_tokens": 256,
+    "prefill_chunk_size": 128,
+    "max_prefill_steps": 1,
+    "kv_cache_dtype": "model",
+    "model": "/home/hrxu/huggingface/Qwen3-1.7B",
+    "model_dtype": "checkpoint",
+    "max_num_seqs": 8,
+    "max_model_len": 2048,
+    "max_kvcache_blocks": 12,
+    "batching_mode": "separate",
+    "speculative_policy": "off",
+    "enable_prefix_caching": true,
+    "host_kv_cache_bytes": 1073741824,
+    "host_kv_async_prefetch": false
+  },
+  "status": "CAPACITY_THROUGHPUT_PASS_ABSOLUTE_SLO_MISS",
+  "default": false,
+  "decision": {
+    "status": "CAPACITY_THROUGHPUT_PASS_ABSOLUTE_SLO_MISS",
+    "recommended": false,
+    "scope": "GPU12 pages/336MiB +CPU1GiB, repeated1025-token-prefix capacity fixture only",
+    "reason": "1.303189891x recurring; unique no stable benefit; absolute SLO only30/180 per category/control",
+    "default_changed": false
+  }
+}

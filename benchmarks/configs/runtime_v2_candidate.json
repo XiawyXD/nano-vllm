@@ -1,0 +1,20 @@
+{
+  "runtime_preset": "baseline",
+  "batching_mode": "mixed",
+  "speculative_policy": "adaptive",
+  "metadata_backend": "reuse",
+  "enable_mixed_graph": true,
+  "mixed_attention_backend": "split",
+  "enforce_eager": false,
+  "rmsnorm_backend": "torch",
+  "mlp_backend": "torch",
+  "sampler_backend": "torch",
+  "decode_attention_backend": "flash",
+  "kv_cache_dtype": "model",
+  "tensor_parallel_size": 1,
+  "max_num_seqs": 16,
+  "max_num_batched_tokens": 512,
+  "prefill_chunk_size": 128,
+  "max_model_len": 2048,
+  "gpu_memory_utilization": 0.3
+}

@@ -1,0 +1,13 @@
+* text=auto
+# Keep historical Python EOF spacing; indentation and trailing spaces are checked.
+*.py text eol=lf whitespace=-blank-at-eof
+# Two trailing spaces are intentional Markdown hard line breaks.
+*.md text eol=lf whitespace=-blank-at-eol
+*.json text eol=lf
+*.jsonl text eol=lf
+*.toml text eol=lf
+*.sh text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.png binary

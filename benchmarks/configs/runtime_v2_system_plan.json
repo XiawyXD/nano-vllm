@@ -1,0 +1,37 @@
+{
+  "fixtures": [
+    "benchmarks/workloads/runtime_v2_holdout.jsonl",
+    "/home/hrxu/huggingface/Qwen3-1.7B/model-00001-of-00002.safetensors",
+    "/home/hrxu/huggingface/Qwen3-1.7B/model-00002-of-00002.safetensors"
+  ],
+  "stages": [
+    {
+      "name": "profile_and_mlp",
+      "entry": "runtime-v2-profile",
+      "args": ["run", "--model", "/home/hrxu/huggingface/Qwen3-1.7B", "--output", "{stage_output}", "--torch-profiler", "cuda"],
+      "timeout_seconds": 14400,
+      "result_json": "{stage_output}/summary.json"
+    },
+    {
+      "name": "quality_22k",
+      "entry": "quality",
+      "args": ["run", "--model", "/home/hrxu/huggingface/Qwen3-1.7B", "--candidate-config", "benchmarks/configs/runtime_v2_quality_candidate.json", "--output", "{stage_output}"],
+      "timeout_seconds": 4000,
+      "result_json": "{stage_output}/comparison.json"
+    },
+    {
+      "name": "performance_validation",
+      "entry": "runtime-v2-performance",
+      "args": ["run", "--model", "/home/hrxu/huggingface/Qwen3-1.7B", "--input-split", "validation", "--output", "{stage_output}"],
+      "timeout_seconds": 28800,
+      "result_json": "{stage_output}/summary.json"
+    },
+    {
+      "name": "http_soak_30min",
+      "entry": "runtime-v2-soak",
+      "args": ["run", "--model", "/home/hrxu/huggingface/Qwen3-1.7B", "--output", "{stage_output}", "--duration", "1800"],
+      "timeout_seconds": 7200,
+      "result_json": "{stage_output}/summary.json"
+    }
+  ]
+}

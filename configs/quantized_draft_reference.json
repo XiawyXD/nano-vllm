@@ -1,0 +1,47 @@
+{
+  "config": {
+    "tensor_parallel_size": 1,
+    "enforce_eager": false,
+    "rmsnorm_backend": "triton",
+    "linear_backend": "triton_stable",
+    "numerical_backend": "consistent",
+    "metadata_backend": "reuse",
+    "enable_mixed_graph": false,
+    "gpu_memory_utilization": 0.9,
+    "max_num_batched_tokens": 256,
+    "prefill_chunk_size": 128,
+    "max_prefill_steps": 1,
+    "kv_cache_dtype": "model",
+    "model": "/home/hrxu/huggingface/Qwen3-8B",
+    "model_dtype": "checkpoint",
+    "max_num_seqs": 1,
+    "max_model_len": 1024,
+    "max_kvcache_blocks": 6,
+    "batching_mode": "mixed",
+    "speculative_policy": "fixed",
+    "enable_prefix_caching": false,
+    "draft_model": "/home/hrxu/nano-draft-calib-20261024/checkpoints/Qwen3-0.6B-AutoRound-W4G128-MixedCal-001",
+    "draft_dtype": "float16",
+    "draft_execution": "graph",
+    "draft_verify_graph": true,
+    "draft_graph_max_tokens": 8,
+    "draft_quantization": "awq",
+    "draft_quant_backend": "marlin",
+    "marlin_library": "/home/hrxu/nano-vllm/artifacts/spec_quant_20261023/runtime_deps/marlin_vllm_0_17_1/verified-001/vllm/_C.abi3.so"
+  },
+  "sampling": {
+    "temperature": 0,
+    "max_tokens": 64,
+    "speculative_method": "draft_model",
+    "speculative_max_draft_tokens": 4
+  },
+  "status": "REVIEW_REQUIRED_NO_STABLE_GAIN",
+  "default": false,
+  "decision": {
+    "status": "REVIEW_REQUIRED_NO_STABLE_GAIN",
+    "recommended": false,
+    "scope": "Old MSE W4A16 native draft diagnostic reference",
+    "reason": "Full-logit dense/Marlin REVIEW persists; speed1.004324998x FP16 below1.03 gate; acceptance44.989% vs46.975%",
+    "default_changed": false
+  }
+}

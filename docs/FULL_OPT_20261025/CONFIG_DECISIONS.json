@@ -1,0 +1,134 @@
+{
+  "status": "FINAL_SCOPED_DECISIONS",
+  "created": 1792874745.4432032,
+  "decisions": {
+    "ordinary_service": {
+      "status": "PASS_CURRENT_SOURCE_TP1_C8_HTTP",
+      "recommended": true,
+      "scope": "Qwen3-1.7B BF16 TP1 C8, exact frozen config and TTL5 service limits",
+      "default_changed": false
+    },
+    "tiered_cache": {
+      "status": "CAPACITY_THROUGHPUT_PASS_ABSOLUTE_SLO_MISS",
+      "recommended": false,
+      "scope": "GPU12 pages/336MiB +CPU1GiB, repeated1025-token-prefix capacity fixture only",
+      "reason": "1.303189891x recurring; unique no stable benefit; absolute SLO only30/180 per category/control",
+      "default_changed": false
+    },
+    "fp16_draft": {
+      "status": "THROUGHPUT_PASS_STREAMING_TAIL_REGRESSION",
+      "recommended": false,
+      "scope": "8B consistent BF16 target +FP16 .6B, TP1/C1/K4; exact only to own consistent baseline",
+      "reason": "1.793028279x same-target exact; event-gap p95 27.47ms vs17.38ms; ordinary Torch output differs",
+      "default_changed": false
+    },
+    "quantized_target": {
+      "status": "SCOPED_REPEAT_PASS",
+      "recommended": true,
+      "recommended_domains": [
+        "repeat"
+      ],
+      "scope": "8B AWQ/Marlin W4A16 TP1/C1 short-context greedy; changed model distribution; Q1 Graph/eager scope only",
+      "reason": "2.301978580x pooled vs ordinary; pooled TTFT ratio1.1016675 exceeds1.10, no whole-profile promotion",
+      "default_changed": false
+    },
+    "quantized_draft_reference": {
+      "status": "REVIEW_REQUIRED_NO_STABLE_GAIN",
+      "recommended": false,
+      "scope": "Old MSE W4A16 native draft diagnostic reference",
+      "reason": "Full-logit dense/Marlin REVIEW persists; speed1.004324998x FP16 below1.03 gate; acceptance44.989% vs46.975%",
+      "default_changed": false
+    }
+  },
+  "experiments": {
+    "async_metadata": {
+      "status": "CORRECT_BUT_NO_STABLE_GAIN",
+      "recommended": false,
+      "median_ratio": 1.0003245320271863,
+      "all_rounds_faster": false,
+      "default_enabled": false
+    },
+    "new_calibration": {
+      "status": "STOPPED_DEV_ROLLOUT_REJECTED",
+      "recommended": false,
+      "final_validation_performed": false,
+      "checkpoint": "/home/hrxu/nano-full-opt-20261024/quantization/attempts/full_mse003/deployment",
+      "checkpoint_sha256": "e9759970c0c0d8893724ef30fd989c0a49ad5734b4b39229a2b762e1b86588bf",
+      "reason": "DEV NLL/KL pass; CN1200/4131 <1218/4062, verifications3195>3189",
+      "default_enabled": false
+    },
+    "stochastic_temperature": {
+      "status": "CORRECTNESS_VALIDATED",
+      "recommended_for_speed": false,
+      "scope": "FP16 native draft TP1/C1 temperature-only; no top-k/top-p/penalties; FP64 normalized p/q",
+      "gpu_samples_per_case": 100000,
+      "default_enabled": false
+    }
+  },
+  "no_numeric_or_quality_threshold_relaxation": true,
+  "no_final_data_parameter_selection": true,
+  "all_global_defaults_unchanged": true,
+  "evidence": {
+    "formal_freeze001.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/formal_freeze001.json",
+      "sha256": "f00562038d64722896e89c34220147763847dccd89c0f0cf42a2b2d4f5ee3bf4"
+    },
+    "formal_analysis001.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/formal_analysis001.json",
+      "sha256": "1f38841eec101bd4d644f4c73e7b3a6234d21f3f07def40106483049e25f02c6"
+    },
+    "formal_execution_summary001.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/formal_execution_summary001.json",
+      "sha256": "00aebdd8469e460eaa24d83a6a685ff4cee8d5af07ac0dee2afdc50da6a33f24"
+    },
+    "release_selection.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/release_selection.json",
+      "sha256": "658edb029e512f037ce8e1ee62dc00ddda0ac2dc186813a8dac16917de34dc64"
+    },
+    "final_quality_gates001.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/final_quality_gates001.json",
+      "sha256": "84c4dac418e672afbb9aa2e2f0c74d6058df35c708c542e47cfb19b440e85887"
+    },
+    "validation/quality_context_final_payloadhash003.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/validation/quality_context_final_payloadhash003.json",
+      "sha256": "fdd9227c5fd7b6b46d47393afade7cc296e4ad0065547f77c720c726b78e5ae2"
+    },
+    "service_tools/tail_gate/formal_slo_actual001/formal_slo_report.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/service_tools/tail_gate/formal_slo_actual001/formal_slo_report.json",
+      "sha256": "b335d343b39b1bf4a6c7f9b8d06671ac0425072c03dacba40bc75cd63e77cc7e"
+    },
+    "service_tools/frozen002/soak002/http-raw/summary.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/service_tools/frozen002/soak002/http-raw/summary.json",
+      "sha256": "b3e6061802709c238cdb8de9ace7a59d21f8c1e79a1e81a7e1bab538c99560a7"
+    },
+    "diagnosis/target_marlin8b_runs/target002/supervisor_report.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/diagnosis/target_marlin8b_runs/target002/supervisor_report.json",
+      "sha256": "21162b159198c39a314e8add34f1de801cbb06fa6984099b0e89c8db8158cd35"
+    },
+    "validation/stochastic_gpu_distribution002.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/validation/stochastic_gpu_distribution002.json",
+      "sha256": "21572e17844d9e920db4103282a5f1ddb299f6adde6c75b1f8c239b693dddfb1"
+    },
+    "validation/serve_validated_smoke003/report.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/validation/serve_validated_smoke003/report.json",
+      "sha256": "f827b4367cb23a99bc977c209a23baf7752b070fb6d0ec02e9ebb46c13a977c1"
+    },
+    "runtime_tools/shared_integration001/FINAL_RECEIPT.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/runtime_tools/shared_integration001/FINAL_RECEIPT.json",
+      "sha256": "e3cefd59df6dae93cff4cb492e3fb69c1017abdf6a74213c6dbfb73465d2a9da"
+    },
+    "runtime_tools/PROFILE_FINDINGS_ZH.md": {
+      "path": "/home/hrxu/nano-full-opt-20261024/runtime_tools/PROFILE_FINDINGS_ZH.md",
+      "sha256": "89503dc45e1f76987062153d5af875d063bc1076f8ffa14dab5f6a56794b61c9"
+    },
+    "reproduction/model_provenance_v1.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/reproduction/model_provenance_v1.json",
+      "sha256": "608e3fc22506f70bfead2d18e749a4c774f2e9bb288c77f3b267ebe65438a31c"
+    },
+    "environment_final001.json": {
+      "path": "/home/hrxu/nano-full-opt-20261024/environment_final001.json",
+      "sha256": "be7d3afb0fdb5f9047c0131a0fc7c8ca427553107662791fb85dc015e4e6b031"
+    }
+  },
+  "script_sha256": "636a602ac9f72263bbb69a8e57936064b6aa0d9d43a8ffb2ee6b5b762f29c7aa"
+}

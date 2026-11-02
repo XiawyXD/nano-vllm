@@ -1,0 +1,34 @@
+{
+  "status": "ROOT_CLEANED_EVIDENCE_PRESERVED",
+  "archive": "/home/hrxu/nano-vllm-archive/home-cleanup-20261025-120138",
+  "removed_root_directories": [
+    "nano-draft-fix-20261023-A6IvVNcl",
+    "nano-rope-20261024",
+    "nano-spec-quant-20261023-yefFcZZX",
+    "nano-target-align-20261024",
+    "nano-regularized-lfq-20261024",
+    "nano-vllm-learning",
+    "nano-full-opt-20261024-final-bundle001"
+  ],
+  "protected": {
+    "nano-vllm": "current working tree",
+    "nano-full-opt-20261024": "frozen source and final evidence",
+    "nano-draft-calib-20261024": "MSE checkpoint, parent perf manifest used by current/frozen tools",
+    "nano-quality-20261024": "AutoRound environment and hash-bound layer-audit dependency",
+    "nano-vllm-archive": "all historical evidence"
+  },
+  "moved_loose_files": 14,
+  "packed_source_trees": 10,
+  "compressed_source_bytes_saved": 42564400,
+  "duplicate_payload_groups": 19,
+  "duplicate_files_removed": 74,
+  "duplicate_allocated_bytes_freed": 1687728128,
+  "deleted_generated_cache_directories": 57,
+  "runtime_files_unchanged": 55,
+  "git_head_unchanged": true,
+  "git_index_unchanged": true,
+  "changed_helper": "tests/regression/check_w4_quality_pair_cpu.py: literal archive path only",
+  "gpu_used": false,
+  "unique_evidence_discarded": false,
+  "historical_paths": "Older absolute paths inside immutable reports remain historical. Resolve via directory-map.json; compressed source directories use source_snapshots/*.tar.gz."
+}

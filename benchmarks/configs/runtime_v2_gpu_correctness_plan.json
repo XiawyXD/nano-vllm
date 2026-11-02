@@ -1,0 +1,14 @@
+{
+  "fixtures": [
+    "/home/hrxu/huggingface/Qwen3-0.6B/model.safetensors",
+    "/home/hrxu/huggingface/Qwen3-1.7B/model-00001-of-00002.safetensors",
+    "/home/hrxu/huggingface/Qwen3-1.7B/model-00002-of-00002.safetensors"
+  ],
+  "stages": [
+    {"name": "metadata_cuda", "entry": "metadata-gpu", "args": ["--gpu", "--output", "{stage_output}.json"], "timeout_seconds": 180, "result_json": "{stage_output}.json"},
+    {"name": "packed_06", "entry": "packed-runtime", "args": ["--model", "/home/hrxu/huggingface/Qwen3-0.6B", "--quick", "--output", "{stage_output}.json"], "timeout_seconds": 1200, "result_json": "{stage_output}.json"},
+    {"name": "engine_06", "entry": "runtime-v2-engine", "args": ["--model", "/home/hrxu/huggingface/Qwen3-0.6B", "--quick", "--output", "{stage_output}.json"], "timeout_seconds": 1800, "result_json": "{stage_output}.json"},
+    {"name": "packed_17", "entry": "packed-runtime", "args": ["--model", "/home/hrxu/huggingface/Qwen3-1.7B", "--output", "{stage_output}.json"], "timeout_seconds": 1800, "result_json": "{stage_output}.json"},
+    {"name": "engine_17", "entry": "runtime-v2-engine", "args": ["--model", "/home/hrxu/huggingface/Qwen3-1.7B", "--output", "{stage_output}.json"], "timeout_seconds": 1800, "result_json": "{stage_output}.json"}
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "config": {
+    "tensor_parallel_size": 1,
+    "enforce_eager": false,
+    "rmsnorm_backend": "triton",
+    "linear_backend": "torch",
+    "numerical_backend": "default",
+    "metadata_backend": "reuse",
+    "enable_mixed_graph": false,
+    "gpu_memory_utilization": 0.9,
+    "max_num_batched_tokens": 256,
+    "prefill_chunk_size": 128,
+    "max_prefill_steps": 1,
+    "kv_cache_dtype": "model",
+    "model": "/home/hrxu/huggingface/Qwen3-8B-AWQ",
+    "model_dtype": "float16",
+    "quantization": "awq",
+    "quant_backend": "marlin",
+    "marlin_library": "/home/hrxu/nano-vllm/artifacts/spec_quant_20261023/runtime_deps/marlin_vllm_0_17_1/verified-001/vllm/_C.abi3.so",
+    "max_num_seqs": 1,
+    "max_model_len": 1024,
+    "max_kvcache_blocks": 6,
+    "batching_mode": "separate",
+    "speculative_policy": "off",
+    "enable_prefix_caching": false
+  },
+  "status": "SCOPED_REPEAT_PASS",
+  "default": false,
+  "decision": {
+    "status": "SCOPED_REPEAT_PASS",
+    "recommended": true,
+    "recommended_domains": [
+      "repeat"
+    ],
+    "scope": "8B AWQ/Marlin W4A16 TP1/C1 short-context greedy; changed model distribution; Q1 Graph/eager scope only",
+    "reason": "2.301978580x pooled vs ordinary; pooled TTFT ratio1.1016675 exceeds1.10, no whole-profile promotion",
+    "default_changed": false
+  }
+}

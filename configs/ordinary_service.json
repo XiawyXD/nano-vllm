@@ -1,0 +1,32 @@
+{
+  "config": {
+    "tensor_parallel_size": 1,
+    "enforce_eager": false,
+    "rmsnorm_backend": "triton",
+    "linear_backend": "torch",
+    "numerical_backend": "default",
+    "metadata_backend": "reuse",
+    "enable_mixed_graph": false,
+    "gpu_memory_utilization": 0.9,
+    "max_num_batched_tokens": 256,
+    "prefill_chunk_size": 128,
+    "max_prefill_steps": 1,
+    "kv_cache_dtype": "model",
+    "model": "/home/hrxu/huggingface/Qwen3-1.7B",
+    "model_dtype": "checkpoint",
+    "max_num_seqs": 8,
+    "max_model_len": 2048,
+    "max_kvcache_blocks": 32,
+    "batching_mode": "separate",
+    "speculative_policy": "off",
+    "enable_prefix_caching": true
+  },
+  "status": "PASS_CURRENT_SOURCE_TP1_C8_HTTP",
+  "default": true,
+  "decision": {
+    "status": "PASS_CURRENT_SOURCE_TP1_C8_HTTP",
+    "recommended": true,
+    "scope": "Qwen3-1.7B BF16 TP1 C8, exact frozen config and TTL5 service limits",
+    "default_changed": false
+  }
+}

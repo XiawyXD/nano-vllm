@@ -1,0 +1,60 @@
+{
+  "config": {
+    "tensor_parallel_size": 1,
+    "enforce_eager": false,
+    "rmsnorm_backend": "triton",
+    "linear_backend": "triton_stable",
+    "numerical_backend": "consistent",
+    "metadata_backend": "reuse",
+    "enable_mixed_graph": false,
+    "gpu_memory_utilization": 0.9,
+    "max_num_batched_tokens": 256,
+    "prefill_chunk_size": 128,
+    "max_prefill_steps": 1,
+    "kv_cache_dtype": "model",
+    "model": "/home/hrxu/huggingface/Qwen3-8B",
+    "model_dtype": "checkpoint",
+    "max_num_seqs": 1,
+    "max_model_len": 1024,
+    "max_kvcache_blocks": 6,
+    "batching_mode": "separate",
+    "speculative_policy": "off",
+    "enable_prefix_caching": false,
+    "stable_linear_packed": true
+  },
+  "sampling": {
+    "temperature": 0,
+    "max_tokens": 64,
+    "speculative_method": "off",
+    "ignore_eos": true
+  },
+  "status": "SCOPED_INCREMENT_PASS",
+  "default": false,
+  "decision": {
+    "incremental_reference": "plain_consistent",
+    "comparison": {
+      "median_speed_ratio": 1.0658530979259324,
+      "paired_ratios": [
+        1.0685092898542075,
+        1.068883065607108,
+        1.0637311858478942,
+        1.0623006291281463,
+        1.0658530979259324
+      ],
+      "all_five_faster": true,
+      "ttft_p95_ratio": 0.979146459675046,
+      "event_gap_p95_ratio": 0.9318639801050639,
+      "speed_pass": true,
+      "streaming_pass": true,
+      "both_pass": true
+    },
+    "whole_service_recommended": false,
+    "increment_recommended_for_existing_consistent": true,
+    "draft_latency_recommended": false,
+    "default": false,
+    "scope": "Only tested RTX4090 TP1/C1 Qwen3-8B BF16 consistent target, maxlen1024/chunk256. Frozen mixed workload pooled pass. FP16 draft greedy optional; no quantization/TP/random extension.",
+    "subgroup_limits": "ordinary English768 TTFT FAIL; K4 code768 one slower round and TTFT FAIL; no all-workload recommendation",
+    "evidence": "/home/hrxu/nano-vllm-archive/draft-q2-linear-20261026-001/results/final-analysis001.json",
+    "sampling_note": "ignore_eos=True is fixed-length benchmark only; set False for EOS stopping"
+  }
+}

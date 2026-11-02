@@ -1,0 +1,20 @@
+{
+  "fixtures": [],
+  "stages": [
+    {"name": "kv_plan", "entry": "execution-plan", "args": [], "timeout_seconds": 180},
+    {"name": "planned_engine", "entry": "planned-engine", "args": [], "timeout_seconds": 180},
+    {"name": "packed_metadata", "entry": "packed-metadata-cpu", "args": [], "timeout_seconds": 60},
+    {"name": "adaptive", "entry": "adaptive", "args": [], "timeout_seconds": 60},
+    {"name": "metadata", "entry": "metadata-cpu", "args": [], "timeout_seconds": 60},
+    {"name": "gpu_guard", "entry": "gpu-guard", "args": [], "timeout_seconds": 60},
+    {"name": "harness", "entry": "runtime-v2-harness", "args": [], "timeout_seconds": 60},
+    {"name": "evaluation_harness", "entry": "evaluation-harness", "args": [], "timeout_seconds": 180},
+    {"name": "legacy_scheduler", "entry": "unit", "args": [], "timeout_seconds": 120},
+    {"name": "runtime_hardening", "entry": "runtime-hardening", "args": [], "timeout_seconds": 120},
+    {"name": "engine_hardening", "entry": "engine-hardening", "args": [], "timeout_seconds": 120},
+    {"name": "service_hardening", "entry": "service-hardening", "args": [], "timeout_seconds": 180},
+    {"name": "api", "entry": "api", "args": [], "timeout_seconds": 120},
+    {"name": "ngram", "entry": "ngram", "args": [], "timeout_seconds": 120},
+    {"name": "tp_protocol", "entry": "tp-runtime", "args": [], "timeout_seconds": 180}
+  ]
+}

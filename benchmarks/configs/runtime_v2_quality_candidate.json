@@ -1,0 +1,15 @@
+{
+  "runtime_preset": "baseline",
+  "batching_mode": "mixed",
+  "speculative_policy": "adaptive",
+  "metadata_backend": "reuse",
+  "enable_mixed_graph": true,
+  "mixed_attention_backend": "split",
+  "enforce_eager": false,
+  "rmsnorm_backend": "torch",
+  "mlp_backend": "torch",
+  "sampler_backend": "torch",
+  "decode_attention_backend": "flash",
+  "kv_cache_dtype": "model",
+  "tensor_parallel_size": 1
+}

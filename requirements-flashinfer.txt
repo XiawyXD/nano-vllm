@@ -1,0 +1,9 @@
+# 仅安装到 --system-site-packages 的独立 .venv-flashinfer。
+# 使用 pip install --no-deps -r requirements-flashinfer.txt；基础Torch/CUDA依赖沿用exp。
+# 不直接对exp运行无约束的pip install，避免解析到不同Torch/CUDA组合。
+flashinfer-python==0.5.3
+nvidia-cutlass-dsl==4.2.1
+apache-tvm-ffi==0.1.14.post0
+nvidia-cudnn-frontend==1.15.0
+cuda-python==12.9.4
+tabulate==0.10.0
